@@ -3,7 +3,7 @@
 A fully responsive, modern landing page website built for **SkillCraft Technology** as part of my **Web Development Internship** (Online Mode).
 
 ### Live Demo
-🔗 https://YOUR-USERNAME.github.io/skillcraft-website/  
+🔗 http://127.0.0.1:5500/index.html
 (Replace with your actual GitHub Pages URL)
 
 ### Features
