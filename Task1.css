@@ -1,0 +1,299 @@
+/* ==============================================
+   RESET & BASE STYLES
+============================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0f1a;          /* zinc-950 dark base */
+  color: #f1f5f9;                     /* light text */
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container for content */
+.max-w-7xl {
+  max-width: 1280px;
+}
+
+/* ==============================================
+   FIXED NAVIGATION
+============================================== */
+nav {
+  background: rgba(10, 15, 26, 0.4);   /* semi-transparent initially */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+nav.nav-scrolled {
+  background: rgba(10, 15, 26, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #10b981 !important;           /* emerald-500 hover */
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: #10b981 !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #10b981;
+  border-radius: 3px;
+}
+
+/* Mobile menu */
+#mobile-nav {
+  transition: all 0.4s ease;
+}
+
+#mobile-nav a {
+  display: block;
+  padding: 12px 0;
+}
+
+#mobile-nav a:hover,
+#mobile-nav a.active {
+  color: #10b981;
+}
+
+/* ==============================================
+   HEADINGS & TEXT
+============================================== */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* ==============================================
+   CARDS (programs, features, etc.)
+============================================== */
+.card {
+  background: #111827;                /* zinc-900 */
+  border: 1px solid #1f2937;          /* zinc-800 border */
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+}
+
+/* Gradient headers for cards */
+.card-header {
+  height: 180px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+/* ==============================================
+   FORM STYLES (contact page)
+============================================== */
+form input,
+form textarea,
+form select {
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: #f1f5f9;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+form button {
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #059669;                /* emerald-700 */
+  transform: translateY(-2px);
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+============================================== */
+@media (max-width: 768px) {
+  nav .flex {
+    padding: 1rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    height: 140px;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+/* ==============================================
+   TESTIMONIAL / SUCCESS STORIES CARDS
+============================================== */
+
+.testimonial-card {
+  background: #111827;                    /* zinc-900 */
+  border: 1px solid #1f2937;              /* zinc-800 */
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  border-color: #10b981;                  /* emerald-500 */
+  box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.2);
+}
+
+.testimonial-card img {
+  transition: transform 0.4s ease;
+}
+
+.testimonial-card:hover img {
+  transform: scale(1.08);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  line-height: 1.7;
+}
+/* ==============================================
+   LIGHT MODE (basic support for toggle)
+============================================== */
+body.light {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body.light nav {
+  background: rgba(248, 250, 252, 0.9);
+}
+
+body.light .card {
+  background: white;
+  border-color: #e2e8f0;
+}
+
+body.light form input,
+body.light form textarea,
+body.light form select {
+  background: white;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+/* Optional subtle scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+/* Timeline enhancements */
+.timeline-number {
+  box-shadow: 0 0 0 8px #0a0f1a;
+}
+
+/* Accordion summary arrow */
+summary::-webkit-details-marker {
+  color: #10b981;
+}
+
+/* Hover scale smooth */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.hero-bg {  /* or #home, section#home, etc. */
+  background-image: url('https://img.freepik.com/free-photo/abstract-dark-blue-futuristic-digital-grid-background_53876-104051.jpg?semt=ais_hybrid&w=740&q=80');  /* Path from css/ folder */
+  background-size: cover;          /* Fills the section without stretching badly */
+  background-position: center;     /* Centers the image */
+  background-repeat: no-repeat;    /* No tiling */
+  min-height: 100vh;               /* Full viewport height for hero feel */
+  position: relative;              /* Important for overlays/text positioning */
+}
+
+/* Optional: Dark overlay so text is readable (very common for hero images) */
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  /* Black overlay 50% opacity – adjust 0.4–0.7 */
+  z-index: 1;
+}
+
+/* Make sure your content (text, buttons) is above the overlay */
+.hero-bg > * {
+  position: relative;
+  z-index: 2;
+}
+.about-hero {  /* Add this class to your <section> in about.html */
+  background-image: url('https://img.freepik.com/premium-photo/group-diverse-business-people-working-together-having-meeting_695793-1294.jpg?w=2000');  /* Change filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;  /* Adjust as needed */
+  position: relative;
+}
+
+.about-hero::before {  /* Dark overlay for text readability */
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 15, 26, 0.65);  /* Dark with slight emerald tint possible */
+  z-index: 1;
+}
+
+.about-hero > * {
+  position: relative;
+  z-index: 2;
+}

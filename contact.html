@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SkillCraft Technology</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="Task1.css">
+
+  <!-- Tailwind CDN (if you're using it) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-zinc-950 text-white min-h-screen flex flex-col">
+
+  <!-- FIXED NAVIGATION – same as other pages -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="text-3xl font-bold flex items-center gap-2">
+        <span class="text-emerald-400">✦</span> SkillCraft
+      </a>
+
+      <!-- Menu Links -->
+      <ul class="hidden md:flex gap-8 text-lg font-medium">
+        <li><a href="index.html"        class="nav-link hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="programs.html"     class="nav-link hover:text-emerald-400 transition">Programs</a></li>
+        <li><a href="about.html"        class="nav-link hover:text-emerald-400 transition">About</a></li>
+        <li><a href="why-us.html"       class="nav-link hover:text-emerald-400 transition">Why Us</a></li>
+        <li><a href="contact.html"      class="nav-link hover:text-emerald-400 transition active">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()" class="text-2xl">🌙</button>
+        <a href="contact.html" class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2 rounded-xl font-semibold transition">Apply Now</a>
+        <button id="mobile-menu" class="md:hidden text-3xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="hidden md:hidden bg-zinc-900 py-6">
+      <ul class="flex flex-col items-center gap-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-28 flex-grow">
+    <section class="py-16 px-6 max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
+        <p class="text-xl text-zinc-300 max-w-2xl mx-auto">
+          Have questions about our internships, programs, or how to apply?  
+          Drop us a message — our team usually responds within 24 hours.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Left: Contact Form -->
+        <div class="bg-zinc-900 p-10 rounded-2xl border border-zinc-800 shadow-xl">
+          <h2 class="text-3xl font-semibold mb-8 text-emerald-400">Send Message</h2>
+          
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+              <input type="text" id="name" name="name" required
+                     class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
+                     placeholder="Your name">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required
+                     class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
+                     placeholder="your.email@example.com">
+            </div>
+
+            <div>
+              <label for="program" class="block text-sm font-medium mb-2">Interested In</label>
+              <select id="program" name="program"
+                      class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition">
+                <option value="">Select program (optional)</option>
+                <option value="web">Web Development</option>
+                <option value="data">Data Science / Analytics</option>
+                <option value="uiux">UI/UX Design</option>
+                <option value="digital">Digital Marketing</option>
+                <option value="other">Other / General Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+              <textarea id="message" name="message" rows="6" required
+                        class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
+                        placeholder="Tell us about yourself, your questions, or why you're interested..."></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 rounded-xl transition duration-300 transform hover:scale-[1.02]">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info + Map Placeholder -->
+        <div class="space-y-10">
+          <div>
+            <h2 class="text-3xl font-semibold mb-6 text-emerald-400">Contact Information</h2>
+            <ul class="space-y-6 text-zinc-300">
+              <li class="flex items-start gap-4">
+                <span class="text-2xl">📧</span>
+                <div>
+                  <strong class="block">Email</strong>
+                  support@skillcrafttech.com
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="text-2xl">📞</span>
+                <div>
+                  <strong class="block">Phone / WhatsApp</strong>
+                  +91 66123 66123 (Mon–Sat, 10 AM – 7 PM IST)
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="text-2xl">🌐</span>
+                <div>
+                  <strong class="block">Website</strong>
+                  <a href="https://skillcrafttech.com" target="_blank" class="text-emerald-400 hover:underline">skillcrafttech.com</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+            <div class="flex gap-6 text-3xl">
+              <a href="#" class="hover:text-emerald-400 transition">LinkedIn</a>
+              <a href="#" class="hover:text-emerald-400 transition">Instagram</a>
+              <a href="#" class="hover:text-emerald-400 transition">Twitter/X</a>
+            </div>
+          </div>
+
+          <!-- Optional: Simple map placeholder or embed later -->
+          <div class="mt-8">
+            <h3 class="text-2xl font-semibold mb-4">We're Virtual – Reach Us Anytime!</h3>
+            <p class="text-zinc-400">100% online internships from anywhere in India.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (simple shared style) -->
+  <footer class="bg-black py-12 text-center text-zinc-500 mt-auto">
+    <p>© 2026 SkillCraft Technology | Empowering the Next Generation of Tech Talent</p>
+    <p class="mt-2 text-sm">Built as part of Web Development Internship Task</p>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="/Task1.js" defer></script>
+
+  <!-- Optional: Basic form submission alert (for demo) -->
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent. (This is a demo – in real project it would email or go to backend)');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

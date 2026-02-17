@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | SkillCraft Technology</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="Task1.css">
+  <!-- Tailwind CDN (if using) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-zinc-950 text-white min-h-screen flex flex-col">
+
+  <!-- FIXED NAVIGATION – copy from other pages -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="text-3xl font-bold flex items-center gap-2">
+        <span class="text-emerald-400">✦</span> SkillCraft
+      </a>
+
+      <!-- Menu Links -->
+      <ul class="hidden md:flex gap-8 text-lg font-medium">
+        <li><a href="index.html" class="nav-link hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="about.html" class="nav-link hover:text-emerald-400 transition active">About</a></li>
+        <li><a href="programs.html" class="nav-link hover:text-emerald-400 transition">Programs</a></li>
+        <li><a href="why-us.html" class="nav-link hover:text-emerald-400 transition">Why Us</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-emerald-400 transition">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()" class="text-2xl">🌙</button>
+        <a href="contact.html" class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2 rounded-xl font-semibold transition">Apply Now</a>
+        <button id="mobile-menu" class="md:hidden text-3xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="hidden md:hidden bg-zinc-900 py-6">
+      <ul class="flex flex-col items-center gap-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-28 flex-grow">
+    <!-- Hero / Intro Section -->
+    <section class="py-16 md:py-24 px-6 bg-gradient-to-b from-zinc-950 to-zinc-900 text-center">
+      <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Crafting Success Through Technology
+        </h1>
+        <p class="text-xl md:text-2xl text-zinc-300 max-w-4xl mx-auto mb-10">
+          We are not just a company — we are craftsmen of talent, architects of opportunity, and builders of tomorrow.
+        </p>
+        <p class="text-lg text-zinc-400 max-w-3xl mx-auto">
+          SkillCraft Technology empowers students across India with real-world skills, hands-on projects, and industry-relevant experience through 100% virtual internships.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-10">
+          <div class="p-8 bg-zinc-800/70 rounded-3xl border border-emerald-900/30 hover:border-emerald-500 transition">
+            <h2 class="text-3xl font-bold mb-6 text-emerald-400">Our Mission</h2>
+            <p class="text-zinc-300 text-lg leading-relaxed">
+              To empower the next generation of tech talent by providing accessible, practical, and industry-designed internship programs. We bridge the gap between academic learning and real-world application, helping students build confidence, portfolios, and careers — with zero cost barriers (only ₹99 for verified certificate).
+            </p>
+          </div>
+
+          <div class="p-8 bg-zinc-800/70 rounded-3xl border border-emerald-900/30 hover:border-emerald-500 transition">
+            <h2 class="text-3xl font-bold mb-6 text-emerald-400">Our Vision</h2>
+            <p class="text-zinc-300 text-lg leading-relaxed">
+              To become the leading platform in India that transforms thousands of students into skilled professionals ready for tomorrow's tech jobs. By 2030, we aim to train and certify lakhs of young talents through meaningful, remote learning experiences.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://tse2.mm.bing.net/th/id/OIP.gZsI5TfpiO7O2n7cK96BcQHaDt?cb=defcache2&defcache=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Team collaborating on tech projects" class="rounded-3xl shadow-2xl border border-zinc-700">
+          <p class="text-center text-zinc-500 mt-4 text-sm">Our team crafting the future, one skill at a time</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why SkillCraft / Core Values -->
+    <section class="py-20 px-6 bg-zinc-900">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">What Makes SkillCraft Different</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-10 bg-zinc-800 rounded-3xl text-center hover:-translate-y-4 transition-all duration-300 border border-zinc-700 hover:border-emerald-500/50">
+            <div class="text-6xl mb-6 text-emerald-400">🔨</div>
+            <h3 class="text-2xl font-semibold mb-4">Hands-On Learning</h3>
+            <p class="text-zinc-300">Real projects, not just videos — build your GitHub portfolio from day one.</p>
+          </div>
+
+          <div class="p-10 bg-zinc-800 rounded-3xl text-center hover:-translate-y-4 transition-all duration-300 border border-zinc-700 hover:border-emerald-500/50">
+            <div class="text-6xl mb-6 text-emerald-400">🌐</div>
+            <h3 class="text-2xl font-semibold mb-4">100% Virtual & Flexible</h3>
+            <p class="text-zinc-300">Work from Salem, Chennai, or anywhere in India — fits your college schedule.</p>
+          </div>
+
+          <div class="p-10 bg-zinc-800 rounded-3xl text-center hover:-translate-y-4 transition-all duration-300 border border-zinc-700 hover:border-emerald-500/50">
+            <div class="text-6xl mb-6 text-emerald-400">🛡️</div>
+            <h3 class="text-2xl font-semibold mb-4">Verified & Recognized</h3>
+            <p class="text-zinc-300">Industry-relevant certificates (verified) that actually help in placements & resumes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-hero py-24 px-6 text-center">
+  <!-- Your intro content here -->
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center text-zinc-500 mt-auto">
+    <p>© 2026 SkillCraft Technology | Empowering Students Across India</p>
+    <p class="mt-2 text-sm">Virtual Internships • Real Skills • Future Careers</p>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="/Task1.js"></script>
+</body>
+</html>

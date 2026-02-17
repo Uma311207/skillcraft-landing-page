@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs | SkillCraft Technology</title>
+
+  <!-- Link to your shared CSS file -->
+  <link rel="stylesheet" href="Task1.css">
+
+  <!-- If you're using Tailwind via CDN (optional but recommended) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts if you want nice typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-zinc-950 text-white">
+
+  <!-- FIXED NAVIGATION BAR – paste the SAME nav from index.html here -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="text-3xl font-bold flex items-center gap-2">
+        <span class="text-emerald-400">✦</span> SkillCraft
+      </a>
+
+      <!-- Menu Links – IMPORTANT: use .html filenames, not #ids -->
+      <ul class="hidden md:flex gap-8 text-lg font-medium">
+        <li><a href="index.html"        class="nav-link hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="programs.html"     class="nav-link hover:text-emerald-400 transition active">Programs</a></li>
+        <li><a href="about.html"        class="nav-link hover:text-emerald-400 transition">About</a></li>
+        <li><a href="why-us.html"       class="nav-link hover:text-emerald-400 transition">Why Us</a></li>
+        <li><a href="contact.html"      class="nav-link hover:text-emerald-400 transition">Contact</a></li>
+      </ul>
+
+      <!-- Theme toggle + Apply button + Mobile button -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()" class="text-2xl">🌙</button>
+        <a href="contact.html" class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2 rounded-xl font-semibold transition">Apply Now</a>
+        <button id="mobile-menu" class="md:hidden text-3xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-nav" class="hidden md:hidden bg-zinc-900 py-6">
+      <ul class="flex flex-col items-center gap-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html" class="active">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT – this is different for each page -->
+  <main class="pt-28">   <!-- pt-28 = padding-top so fixed nav doesn't cover content -->
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-center mb-8">
+        Our Internship Programs
+      </h1>
+      <p class="text-xl text-center text-zinc-300 max-w-3xl mx-auto mb-16">
+        Choose the track that matches your interest. All programs are 100% virtual, 4 weeks long, with hands-on projects and verified certificates.
+      </p>
+
+      <!-- Example program cards – you can make them 3D or add more later -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Web Development Card -->
+        <div class="bg-zinc-800 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-7xl">
+            💻
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold mb-3">Web Development</h3>
+            <p class="text-zinc-400 mb-6">
+              Build modern responsive websites using HTML, CSS, JavaScript, and React basics.
+            </p>
+            <a href="contact.html" class="inline-block bg-emerald-500 px-6 py-3 rounded-xl font-medium hover:bg-emerald-600 transition">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Add 2–4 more cards like this: Data Science, UI/UX, Digital Marketing, etc. -->
+
+      </div>
+    </section>
+    <!-- Program Journey Timeline -->
+<section class="py-20 px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-bold text-center mb-16">Your 4-Week Craft Journey</h2>
+  
+  <div class="relative">
+    <!-- Timeline line -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-zinc-700 hidden md:block"></div>
+    
+    <div class="space-y-16 md:space-y-32">
+      <!-- Week 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-8 relative">
+        <div class="md:w-1/2 text-right md:pr-12">
+          <div class="inline-block bg-emerald-500 text-black px-6 py-3 rounded-full text-xl font-bold mb-4">Week 1</div>
+          <h3 class="text-2xl font-semibold">Onboarding & Fundamentals</h3>
+          <p class="text-zinc-400 mt-3">Tools setup, Git basics, project kickoff, mentor intro calls.</p>
+        </div>
+        <div class="w-16 h-16 rounded-full bg-emerald-500 flex items-center justify-center text-3xl font-bold z-10 md:absolute md:left-1/2 md:-translate-x-1/2">1</div>
+        <div class="md:w-1/2 md:pl-12"></div> <!-- Empty for balance -->
+      </div>
+
+      <!-- Week 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8 relative">
+        <div class="md:w-1/2 text-left md:pl-12">
+          <div class="inline-block bg-emerald-500 text-black px-6 py-3 rounded-full text-xl font-bold mb-4">Week 2</div>
+          <h3 class="text-2xl font-semibold">Core Building Phase</h3>
+          <p class="text-zinc-400 mt-3">Daily coding challenges, code reviews, pair programming sessions.</p>
+        </div>
+        <div class="w-16 h-16 rounded-full bg-emerald-500 flex items-center justify-center text-3xl font-bold z-10 md:absolute md:left-1/2 md:-translate-x-1/2">2</div>
+        <div class="md:w-1/2 md:pr-12"></div>
+      </div>
+
+      <!-- Add Week 3 & 4 similarly... -->
+
+      <!-- Week 4 -->
+      <div class="flex flex-col md:flex-row items-center gap-8 relative">
+        <div class="md:w-1/2 text-right md:pr-12">
+          <div class="inline-block bg-emerald-500 text-black px-6 py-3 rounded-full text-xl font-bold mb-4">Week 4</div>
+          <h3 class="text-2xl font-semibold">Polish, Present & Certify</h3>
+          <p class="text-zinc-400 mt-3">Final project demo, feedback session, verified certificate issuance.</p>
+        </div>
+        <div class="w-16 h-16 rounded-full bg-emerald-500 flex items-center justify-center text-3xl font-bold z-10 md:absolute md:left-1/2 md:-translate-x-1/2">4</div>
+        <div class="md:w-1/2 md:pl-12"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Stats Badges -->
+<section class="py-16 bg-zinc-900">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+    <div class="p-8 bg-zinc-800 rounded-2xl border border-emerald-900/30 hover:border-emerald-500 transition">
+      <div class="text-5xl font-bold text-emerald-400">100%</div>
+      <p class="mt-4 text-zinc-300">Virtual – Work from Salem or Anywhere</p>
+    </div>
+    <div class="p-8 bg-zinc-800 rounded-2xl border border-emerald-900/30 hover:border-emerald-500 transition">
+      <div class="text-5xl font-bold text-emerald-400">₹99</div>
+      <p class="mt-4 text-zinc-300">Only Cert Fee – Internship Free</p>
+    </div>
+    <!-- Add 2 more: e.g. "24/7 Mentor Access", "Real GitHub Projects" -->
+  </div>
+</section>
+
+  </main>
+
+  <!-- Optional: Footer – copy same footer to all pages later -->
+  <footer class="bg-black py-12 text-center text-zinc-500">
+    <p>© 2026 SkillCraft Technology | All rights reserved for internship showcase</p>
+  </footer>
+
+  <!-- Shared JavaScript file -->
+  <script src="/Task1.js" defer></script>
+
+</body>
+</html>
